@@ -1,4 +1,5 @@
-import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './App.scss'
 import { useEffect, useState } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import Title from './components/Title/Title.js'
@@ -7,6 +8,7 @@ import Picture from './components/Picture/Picture.js'
 
 function App() {
   const [nasaInfo, setNasaInfo] = useState({})
+  const [visible, setVisible] = useState(true)
   const baseURL = 'https://api.nasa.gov/planetary/apod?api_key='
   const key = 'lHbDxOJzKgudrE8byarsVEaAvBzmk6VxM8Fg2ELv'
 
@@ -21,6 +23,7 @@ function App() {
       })
       .then((parsedResponse) => {
         setNasaInfo(parsedResponse)
+        setVisible(false)
       })
 
       .catch(function (error) {
@@ -29,12 +32,14 @@ function App() {
   }
 
   const getSelectedDate = (date) => {
+    setVisible(true)
     fetch(baseURL + key + `&date=${date}`, { method: 'GET' })
       .then(function (response) {
         return response.json()
       })
       .then(function (parsedResponse) {
         setNasaInfo(parsedResponse)
+        setVisible(false)
       })
       .catch(function (error) {
         console.log(error)
@@ -42,19 +47,18 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <Container>
-        <Row>
-          <Col xs={12} lg={4}>
-            <Title />
-            <DateSelector getDateInfo={getSelectedDate} />
-          </Col>
-          <Col xs={12} lg={8}>
-            <Picture pictureInfo={nasaInfo} />
-          </Col>
-        </Row>
-      </Container>
-    </div>
+    <Container fluid>
+      <Row>
+        <Col xs={12}>
+          <Title visible={visible} />
+          <DateSelector getDateInfo={getSelectedDate} />
+        </Col>
+        <Col xs={12} className="spinner-container"></Col>
+        <Col xs={12} className="picture-container">
+          <Picture pictureInfo={nasaInfo} />
+        </Col>
+      </Row>
+    </Container>
   )
 }
 

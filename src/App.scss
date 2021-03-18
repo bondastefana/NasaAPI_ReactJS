@@ -1,0 +1,13 @@
+.spinner-container {
+  position: absolute;
+  bottom: 20px;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .spinner-border {
+    height: 4rem !important;
+    width: 4rem !important;
+  }
+}

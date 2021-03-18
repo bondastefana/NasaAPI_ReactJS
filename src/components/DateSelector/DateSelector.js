@@ -1,4 +1,7 @@
 import { useState } from 'react'
+import { Button, Container, Row, Col } from 'react-bootstrap'
+import { Form } from 'react-bootstrap'
+import './DateSelector.scss'
 
 function DaySelector(props) {
   const { getDateInfo } = props
@@ -14,11 +17,27 @@ function DaySelector(props) {
   }
 
   return (
-    <div>
-      Select date:
-      <input type="date" onChange={handleSelectedDate} />
-      <button onClick={submitDate}>See picture</button>
-    </div>
+    <Container className="date-container">
+      <Row>
+        <Col xs={8}>
+          <Form.Control
+            onChange={handleSelectedDate}
+            type="date"
+            placeholder="Select Date"
+          />
+        </Col>
+        <Col xs={4} className="butoon-container">
+          <Button
+            variant="outline-light"
+            onClick={submitDate}
+            disabled={!date}
+            block
+          >
+            Search
+          </Button>
+        </Col>
+      </Row>
+    </Container>
   )
 }
 
