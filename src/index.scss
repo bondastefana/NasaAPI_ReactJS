@@ -4,6 +4,22 @@ body {
   font-family: 'Strait', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #05011f !important;
+  // background: #05011f !important;
   color: #ccccb3 !important;
+
+  background: linear-gradient(-45deg, #191d38, #5a7386, #120b49, #8167bd);
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
