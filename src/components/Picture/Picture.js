@@ -5,13 +5,14 @@ function Picture(props) {
   const { pictureInfo } = props
 
   return (
-    <Container className="picture-container">
+    <Container className="content-container">
       <Row>
-        <Col xs={12}>
+        <Col xs={12} lg={6}>
           <h4>{pictureInfo?.title}</h4>
+          <p className="explanation">{pictureInfo?.explanation}</p>
         </Col>
 
-        <Col xs={12}>
+        <Col xs={12} lg={6} className="picture-container">
           <Image src={pictureInfo?.url} className="selectedImage" rounded />
         </Col>
       </Row>

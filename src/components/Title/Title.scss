@@ -1,8 +1,11 @@
 .title-container {
+  margin-bottom: 20px;
+
   .app-logo-container {
     display: flex;
     justify-content: center;
     filter: drop-shadow(15px 5px 4px #8d1313);
+
     &.blur {
       filter: blur(2px);
       animation-name: spin;
@@ -10,6 +13,7 @@
       animation-iteration-count: infinite;
       animation-timing-function: linear;
     }
+
     @keyframes spin {
       from {
         transform: rotate(0deg);
@@ -18,8 +22,27 @@
         transform: rotate(360deg);
       }
     }
+    .app-logo {
+      height: 150px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
+
   h1 {
     text-align: center;
+    padding: 10px 0;
+    font-size: 34px;
+  }
+
+  .tablet-or-up {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .h1-tablet-or-up {
+    text-align: left;
   }
 }

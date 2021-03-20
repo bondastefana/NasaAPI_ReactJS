@@ -1,0 +1,30 @@
+.video-container {
+  padding-top: 20px;
+
+  .iframe-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  h4 {
+    margin: 0 0 10px 0;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .explanation {
+    text-align: center;
+    font-size: 18px;
+  }
+}

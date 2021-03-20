@@ -1,9 +1,21 @@
-.picture-container {
-  .selectedImage {
-    max-width: 100%;
+.content-container {
+  padding-top: 20px;
+
+  .picture-container {
+    display: flex;
+    justify-content: center;
+
+    .selectedImage {
+      max-width: 100%;
+    }
   }
   h4 {
-    padding: 20px 0;
+    margin: 0 0 10px 0;
     text-align: center;
+    font-weight: bold;
+  }
+  .explanation {
+    text-align: center;
+    font-size: 18px;
   }
 }
