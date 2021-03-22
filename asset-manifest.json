@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/NasaAPI_ReactJS/static/css/main.e4821445.chunk.css",
+    "main.js": "/NasaAPI_ReactJS/static/js/main.d34c49af.chunk.js",
+    "main.js.map": "/NasaAPI_ReactJS/static/js/main.d34c49af.chunk.js.map",
+    "runtime-main.js": "/NasaAPI_ReactJS/static/js/runtime-main.5991836c.js",
+    "runtime-main.js.map": "/NasaAPI_ReactJS/static/js/runtime-main.5991836c.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/NasaAPI_ReactJS/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.d067a125.chunk.js": "/NasaAPI_ReactJS/static/js/2.d067a125.chunk.js",
+    "static/js/2.d067a125.chunk.js.map": "/NasaAPI_ReactJS/static/js/2.d067a125.chunk.js.map",
+    "static/js/3.a214bf8f.chunk.js": "/NasaAPI_ReactJS/static/js/3.a214bf8f.chunk.js",
+    "static/js/3.a214bf8f.chunk.js.map": "/NasaAPI_ReactJS/static/js/3.a214bf8f.chunk.js.map",
+    "index.html": "/NasaAPI_ReactJS/index.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/NasaAPI_ReactJS/static/css/2.4c97ca4f.chunk.css.map",
+    "static/css/main.e4821445.chunk.css.map": "/NasaAPI_ReactJS/static/css/main.e4821445.chunk.css.map",
+    "static/js/2.d067a125.chunk.js.LICENSE.txt": "/NasaAPI_ReactJS/static/js/2.d067a125.chunk.js.LICENSE.txt",
+    "static/media/nasa.b5bf6358.png": "/NasaAPI_ReactJS/static/media/nasa.b5bf6358.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5991836c.js",
+    "static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.d067a125.chunk.js",
+    "static/css/main.e4821445.chunk.css",
+    "static/js/main.d34c49af.chunk.js"
+  ]
+}
