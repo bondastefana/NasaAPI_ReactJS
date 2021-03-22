@@ -8,7 +8,9 @@ function Video(props) {
     <Container className="video-container">
       <Row>
         <Col xs={12}>
-          <h4>{pictureInfo?.title}</h4>
+          <h4>
+            {pictureInfo?.title} <span>({pictureInfo?.date})</span>
+          </h4>
           <p className="explanation">{pictureInfo?.explanation}</p>
         </Col>
 
