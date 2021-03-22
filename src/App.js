@@ -13,6 +13,7 @@ function App() {
   const [visible, setVisible] = useState(true)
   const [errorVisible, setErrorVisible] = useState(false)
   const [errorResponse, setErrorResponse] = useState('')
+  const [onClickRefresh, setOnClickRefresh] = useState(false)
   const userDevice = detectDevice()
   const baseURL = 'https://api.nasa.gov/planetary/apod?api_key='
   const key = 'lHbDxOJzKgudrE8byarsVEaAvBzmk6VxM8Fg2ELv'
@@ -70,6 +71,11 @@ function App() {
     getNasaInfo()
   }
 
+  const handleIconClick = () => {
+    getNasaInfo()
+    setOnClickRefresh(true)
+  }
+
   const getAppClass = () => {
     if (userDevice === 'mobile') {
       return 'app app-mobile'
@@ -84,10 +90,11 @@ function App() {
     <Container fluid className={getAppClass()}>
       <Row>
         <Col xs={12}>
-          <Title visible={visible} handleIconClick={getNasaInfo} />
+          <Title visible={visible} handleIconClick={handleIconClick} />
           <DateSelector
             resetDatePicker={!errorVisible}
             getDateInfo={getSelectedDate}
+            onClickRefresh={onClickRefresh}
           />
         </Col>
         <Col xs={12} className="picture-container">

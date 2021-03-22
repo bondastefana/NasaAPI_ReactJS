@@ -4,7 +4,7 @@ import { Form } from 'react-bootstrap'
 import './DateSelector.scss'
 
 function DaySelector(props) {
-  const { getDateInfo, resetDatePicker } = props
+  const { getDateInfo, resetDatePicker, onClickRefresh } = props
   const [date, setDate] = useState('')
 
   const handleSelectedDate = (event) => {
@@ -16,11 +16,16 @@ function DaySelector(props) {
   }
 
   useEffect(() => {
-    if (resetDatePicker || date) {
+    if (resetDatePicker) {
       setDate('')
     }
-    return () => {}
   }, [resetDatePicker])
+
+  useEffect(() => {
+    if (onClickRefresh) {
+      setDate('')
+    }
+  }, [onClickRefresh])
 
   return (
     <Container className="date-container">
